@@ -1,0 +1,8 @@
+{
+    "cSpell.words": [
+        "wfile",
+        "rfile"
+    ],
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true
+}
