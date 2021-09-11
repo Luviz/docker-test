@@ -1,9 +1,10 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
+from os import environ
 import time
 import json
 
-hostName = "localhost"
-serverPort = 8080
+hostName = environ.get("host") or "0.0.0.0"
+serverPort = int(environ.get("port") or 8080)
 
 
 class MyServer(BaseHTTPRequestHandler):
@@ -76,12 +77,19 @@ class MyServer(BaseHTTPRequestHandler):
     # /test
     def api_POST_test(self):
         self.send_object(200, {"hello": "meh"})
-        print("post")
         pass
 
     def api_GET_test(self):
         self.send_object(200, {"YAY": "nice"})
-        print("get")
+        pass
+
+    def api_GET_math(self):
+        import math
+        self.send_object(200, {
+            'e': math.e,
+            'pi': math.pi,
+            'tau': math.tau,
+        })
         pass
 
 
