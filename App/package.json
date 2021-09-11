@@ -3,12 +3,14 @@
   "version": "0.1.0",
   "description": "FrontEnd",
   "main": "index.js",
+  "type": "commonjs",
   "scripts": {
     "test": "test.js"
   },
   "author": "Bardia Jedi",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "got": "^11.8.2"
   }
 }
