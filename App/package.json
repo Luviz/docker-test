@@ -5,6 +5,7 @@
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
+    "start": "node index",
     "test": "test.js"
   },
   "author": "Bardia Jedi",
