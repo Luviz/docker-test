@@ -1,7 +1,10 @@
 version: 0.2.0
 
 services:
+  container_name: dockertest
   app:
+    image: luviz/dockertest/app
+    container_name: luviz-dockertest-app
     build:
       context: ./App
       dockerfile: Dockerfile
@@ -12,6 +15,8 @@ services:
       - 1337:80
     hostname: app.local
   server: 
+    image: luviz/dockertest/server
+    container_name: luviz-dockertest-server
     build: 
       context: ./Server
       dockerfile: Dockerfile
