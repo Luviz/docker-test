@@ -1,15 +1,20 @@
-version: 0.1.0
+version: 0.2.0
 
 services:
   app:
     build:
       context: ./App
       dockerfile: Dockerfile
+    environment: 
+      - server=http://srv.local
+      - server_port=80
     ports: 
       - 1337:80
+    hostname: app.local
   server: 
     build: 
       context: ./Server
       dockerfile: Dockerfile
     ports: 
       - 1227:80
+    hostname: srv.local
