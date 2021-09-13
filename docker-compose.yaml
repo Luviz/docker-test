@@ -1,7 +1,6 @@
 version: 0.2.0
 
 services:
-  container_name: dockertest
   app:
     image: luviz/dockertest/app
     container_name: luviz-dockertest-app
